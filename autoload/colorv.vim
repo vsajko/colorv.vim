@@ -36,8 +36,7 @@ let s:ColorV.listname="_ColorVList_".g:colorv.version
 let g:_colorv = s:ColorV
 let s:size = "mid"
 let s:mode = has("gui_running")
-            \ || (has("termtruecolor") && &guicolors == 1)
-            \ || (has('nvim') && $NVIM_TUI_ENABLE_TRUE_COLOR == 1)
+            \ || (has("termguicolors"))
             \ ? "gui" : "cterm"
 let s:path = expand('<sfile>:p:h').'/'
 let g:_colorv['size'] = s:size
